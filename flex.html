@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Practice Playground</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .flex-section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      background-color: #fff;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      min-height: 100px;
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .one   { background-color: #e74c3c; }
+    .two   { background-color: #f39c12; }
+    .three { background-color: #27ae60; }
+    .four  { background-color: #3498db; }
+    .five  { background-color: #9b59b6; }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox Practice Playground</h1>
+
+  <!-- 1. flex-direction -->
+  <div class="flex-section">
+    <div class="section-title">1. flex-direction: row</div>
+    <div class="flex-container" style="flex-direction: row;">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 2. flex-direction: column -->
+  <div class="flex-section">
+    <div class="section-title">2. flex-direction: column</div>
+    <div class="flex-container" style="flex-direction: column; height: 300px;">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 3. justify-content: space-between -->
+  <div class="flex-section">
+    <div class="section-title">3. justify-content: space-between</div>
+    <div class="flex-container" style="justify-content: space-evenly;">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 4. justify-content: center (it will act left to right) -->
+  <div class="flex-section">
+    <div class="section-title">4. justify-content: center</div>
+    <div class="flex-container" style="justify-content: center;">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 5. align-items: center (bottom to top it will act)-->
+  <div class="flex-section">
+    <div class="section-title">5. align-items: center (with height)</div>
+    <div class="flex-container" style="align-items: center; height: 150px;">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 6. flex-wrap: wrap  for mobile responsive as item convert into vertically-->
+  <div class="flex-section">
+    <div class="section-title">6. flex-wrap: wrap</div>
+    <div class="flex-container" style="flex-wrap: wrap; width: auto; height: auto">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 7. align-items: flex-start -->
+  <div class="flex-section">
+    <div class="section-title">7. align-items: flex-start</div>
+    <div class="flex-container" style="align-items: flex-start; height: 150px;">
+      <div class="circle one" style="height: 40px;">1</div>
+      <div class="circle two" style="height: 50px;">2</div>
+      <div class="circle three" style="height: 60px;">3</div>
+      <div class="circle four" style="height: 70px;">4</div>
+      <div class="circle five" style="height: 80px;">5</div>
+    </div>
+  </div>
+
+  <!-- 8. gap -->
+  <div class="flex-section">
+    <div class="section-title">8. gap: 30px</div>
+    <div class="flex-container" style="gap: 30px;">
+      <div class="circle one">1</div>
+      <div class="circle two">2</div>
+      <div class="circle three">3</div>
+      <div class="circle four">4</div>
+      <div class="circle five">5</div>
+    </div>
+  </div>
+
+  <!-- 9. flex-grow -->
+  <div class="flex-section">
+    <div class="section-title">9. flex-grow</div>
+    <div class="flex-container">
+      <div class="circle one" style="flex-grow: 1;">1</div>
+      <div class="circle two" style="flex-grow: 2;">2</div>
+      <div class="circle three" style="flex-grow: 3;">3</div>
+      <div class="circle four" style="flex-grow: 1;">4</div>
+      <div class="circle five" style="flex-grow: 2;">5</div>
+    </div>
+  </div>
+    <!-- 10. order (custom order of items) -->
+  <div class="flex-section">
+    <div class="section-title">10. order (custom order of items)</div>
+    <div class="flex-container">
+      <div class="circle one" style="order: 3;">1</div>
+      <div class="circle two" style="order: 1;">2</div>
+      <div class="circle three" style="order: 5;">3</div>
+      <div class="circle four" style="order: 2;">4</div>
+      <div class="circle five" style="order: 4;">5</div>
+    </div>
+    <p style="font-size: 14px; margin-top: 5px;">(Try changing the <code>order</code> values in the code to see how it affects the position of the circles.)</p>
+  </div>
+
+
+</body>
+</html>
